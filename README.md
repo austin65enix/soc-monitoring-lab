@@ -9,6 +9,26 @@ can be integrated into a single operational model.
   <img src="images/architecture-overview.png" width="900">
 </a>
 
+## Architecture Design
+
+This lab is designed as a three-layer integrated Monitoring and SIEM architecture.
+
+**Detection & Monitoring Layer**  
+Zabbix, Wazuh, and Zeek focus on detecting availability issues, host-level security events,
+and network behavior anomalies from different perspectives.
+
+**Event & Forensics Layer**  
+Graylog acts as the central event hub, aggregating logs and security events into a
+correlatable timeline for incident investigation and root cause analysis.
+
+**Trends & Capacity Layer**  
+Prometheus provides long-term metrics and trend visibility, supporting capacity planning
+and distinguishing transient anomalies from systemic issues.
+
+This layered design ensures clear responsibility separation, reduced alert fatigue,
+and long-term maintainability.
+
+
 ### Core Components
 - **Zabbix** – Availability and service monitoring
 - **Wazuh** – Host-based security monitoring and auditing
