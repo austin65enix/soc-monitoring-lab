@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,0 L12,6 L0,12 Z" fill="#334155"/>
+  </marker>
+  <style>
+    .title { font: 700 44px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .subtitle { font: 500 18px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#475569; }
+    .step { fill:#ffffff; stroke:#334155; stroke-width:2.5; rx:18; }
+    .num { font: 800 28px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#2563eb; }
+    .h1 { font: 700 20px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .h2 { font: 600 18px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .h3 { font: 500 16px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#475569; }
+    .arrow { stroke:#334155; stroke-width:3; fill:none; marker-end:url(#arrow); }
+    .callout { fill:#f8fafc; stroke:#cbd5e1; stroke-width:1.5; rx:16; }
+    .calltext { font: 600 18px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .small { font: 500 16px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#334155; }
+  </style>
+</defs>
+
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<text x="800.0" y="85" text-anchor="middle" class="title">Incident Workflow (SOC Triage → RCA)</text>
+<text x="800.0" y="118" text-anchor="middle" class="subtitle">Zabbix → Wazuh/EDR → Zeek → Graylog → Prometheus</text>
+<rect x="90" y="240" width="270" height="110" class="step"/>
+<text x="112" y="278" class="num">1</text>
+<text x="160" y="278" class="h1">Detect</text>
+<text x="112" y="310" class="h2">Zabbix</text>
+<text x="112" y="336" class="h3">Availability / Alerts</text>
+<path d="M 360 295.0 L 390 295.0" class="arrow"/>
+<rect x="400" y="240" width="270" height="110" class="step"/>
+<text x="422" y="278" class="num">2</text>
+<text x="470" y="278" class="h1">Host Triage</text>
+<text x="422" y="310" class="h2">Wazuh / EDR</text>
+<text x="422" y="336" class="h3">Auth, FIM, Process</text>
+<path d="M 670 295.0 L 700 295.0" class="arrow"/>
+<rect x="710" y="240" width="270" height="110" class="step"/>
+<text x="732" y="278" class="num">3</text>
+<text x="780" y="278" class="h1">Network Verify</text>
+<text x="732" y="310" class="h2">Zeek</text>
+<text x="732" y="336" class="h3">DNS / Conn Evidence</text>
+<path d="M 980 295.0 L 1010 295.0" class="arrow"/>
+<rect x="1020" y="240" width="270" height="110" class="step"/>
+<text x="1042" y="278" class="num">4</text>
+<text x="1090" y="278" class="h1">Correlate</text>
+<text x="1042" y="310" class="h2">Graylog</text>
+<text x="1042" y="336" class="h3">Timeline / RCA</text>
+<path d="M 1290 295.0 L 1320 295.0" class="arrow"/>
+<rect x="1330" y="240" width="270" height="110" class="step"/>
+<text x="1352" y="278" class="num">5</text>
+<text x="1400" y="278" class="h1">Validate Trend</text>
+<text x="1352" y="310" class="h2">Prometheus</text>
+<text x="1352" y="336" class="h3">Trend vs. Spike</text>
+<rect x="220" y="420" width="1160" height="150" class="callout"/>
+<text x="260" y="468" class="calltext">Outcome</text>
+<text x="260" y="510" class="small">• Contain / mitigate (EDR action or host/network controls)</text>
+<text x="260" y="542" class="small">• Evidence package: timeline + key logs + metrics snapshot</text>
+<text x="260" y="574" class="small">• Improve: alert tuning, detection rules, capacity thresholds, SOP updates</text>
+<text x="800.0" y="864" text-anchor="middle" class="subtitle">Designed to reduce alert fatigue and accelerate root cause analysis with multi-source correlation.</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,0 L12,6 L0,12 Z" fill="#334155"/>
+  </marker>
+  <style>
+    .title { font: 700 44px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .subtitle { font: 500 18px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#475569; }
+    .box { fill:#e8f2ff; stroke:#2563eb; stroke-width:2.5; rx:16; }
+    .box2 { fill:#ecfeff; stroke:#06b6d4; stroke-width:2.5; rx:16; }
+    .box3 { fill:#f1f5f9; stroke:#334155; stroke-width:2.5; rx:16; }
+    .box4 { fill:#eef2ff; stroke:#4f46e5; stroke-width:2.5; rx:16; }
+    .head { font: 700 22px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .sub { font: 500 18px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .hint { font: 500 16px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#334155; }
+    .arrow { stroke:#334155; stroke-width:3; fill:none; marker-end:url(#arrow); }
+    .label { font: 600 16px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#0f172a; }
+    .chip { fill:#ffffff; stroke:#cbd5e1; stroke-width:1.5; rx:10; }
+  </style>
+</defs>
+
+<rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+<text x="800.0" y="85" text-anchor="middle" class="title">Integrated Monitoring &amp; SIEM Architecture (5‑VM Lab)</text>
+<text x="800.0" y="118" text-anchor="middle" class="subtitle">Detection → Investigation/Forensics → Trends &amp; Capacity</text>
+
+<!-- Top layer: Detection -->
+<rect x="120" y="180" width="420" height="130" class="box"/>
+<text x="142" y="220" class="head">ZABBIXV01</text>
+<text x="142" y="252" class="sub">Zabbix</text>
+<text x="142" y="282" class="hint">Availability &amp; Infrastructure Monitoring</text>
+
+<rect x="610" y="180" width="420" height="130" class="box2"/>
+<text x="632" y="220" class="head">WAZUHV01</text>
+<text x="632" y="252" class="sub">Wazuh</text>
+<text x="632" y="282" class="hint">Host Security &amp; Audit (HIDS)</text>
+
+<rect x="1100" y="180" width="420" height="130" class="box4"/>
+<text x="1122" y="220" class="head">ZEEKV01</text>
+<text x="1122" y="252" class="sub">Zeek</text>
+<text x="1122" y="282" class="hint">Network Behavior Analysis</text>
+
+<!-- Middle layer: Forensics -->
+<rect x="540.0" y="390" width="520" height="140" class="box3"/>
+<text x="562.0" y="436" class="head">GRAYLOGV01</text>
+<text x="562.0" y="472" class="sub">Graylog</text>
+<text x="562.0" y="502" class="hint">Centralized Logging &amp; Incident Forensics (Timeline)</text>
+
+<!-- Bottom layer: Trends -->
+<rect x="540.0" y="610" width="520" height="130" class="box3"/>
+<text x="562.0" y="654" class="head">PROMETHEUS</text>
+<text x="562.0" y="688" class="sub">Prometheus</text>
+<text x="562.0" y="718" class="hint">Metrics, Trends &amp; Capacity Planning</text>
+
+<!-- Arrows to Graylog -->
+<path d="M 330.0 310 L 580.0 390" class="arrow"/>
+<rect x="470.0" y="356" width="180" height="28" class="chip"/>
+<text x="560.0" y="376" text-anchor="middle" class="label">syslog / alerts</text>
+
+<path d="M 820.0 310 L 800.0 390" class="arrow"/>
+<rect x="710.0" y="356" width="180" height="28" class="chip"/>
+<text x="800.0" y="376" text-anchor="middle" class="label">security events</text>
+
+<path d="M 1310.0 310 L 1020.0 390" class="arrow"/>
+<rect x="950.0" y="356" width="170" height="28" class="chip"/>
+<text x="1035.0" y="376" text-anchor="middle" class="label">network logs</text>
+
+<!-- Arrows to Prometheus -->
+<path d="M 330.0 310 L 560.0 610" class="arrow"/>
+<path d="M 820.0 310 L 800.0 610" class="arrow"/>
+<path d="M 1310.0 310 L 1040.0 610" class="arrow"/>
+<rect x="730.0" y="576" width="140" height="28" class="chip"/>
+<text x="800.0" y="596" text-anchor="middle" class="label">metrics</text>
+
+<!-- Footer note -->
+<text x="800.0" y="864" text-anchor="middle" class="subtitle">Designed for clarity: separated responsibilities, correlatable events, and maintainable operations.</text>
+</svg>
