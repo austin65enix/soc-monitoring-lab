@@ -6,7 +6,7 @@ can be integrated into a single operational model.
 
 ## Architecture Overview
 <a href="images/architecture-overview.png">
-  <img src="images/architecture-overview.png" width="900">
+  <img src="images/architecture-overview-optimized.svg" width="900">
 </a>
 
 ## Architecture Design
