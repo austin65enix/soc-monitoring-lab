@@ -73,3 +73,44 @@ and long-term maintainability.
 - Weekly: alert quality review and noise reduction
 - Monthly: retention & capacity review (rotation / storage)
 - Quarterly: upgrades, backups, and restore drills
+
+- ---
+
+## Why SOC Implementations Often Fail
+
+Many organizations invest heavily in SOC tools,
+but still struggle with operational effectiveness.
+
+### 1. Alert Fatigue
+Too many isolated alerts without proper correlation.
+Security teams spend time reviewing noise instead of real incidents.
+
+### 2. No Clear Event Correlation
+Logs are collected, but not structured into a meaningful timeline.
+Root cause analysis becomes slow and reactive.
+
+### 3. Tool-Centric, Not Architecture-Centric
+Deploying multiple tools without defining:
+- Ownership
+- Data flow
+- Responsibility boundaries
+- Maintenance strategy
+
+### 4. No Operational Sustainability
+Without maintenance SOP, retention planning,
+and alert tuning, SOC platforms degrade over time.
+
+---
+
+## How This Lab Addresses Those Problems
+
+This SOC lab focuses on:
+
+- Layered responsibility separation (Detection / Forensics / Trends)
+- Event correlation through centralized logging
+- Clear incident workflow design
+- Long-term maintenance and handover readiness
+
+The goal is not to replicate commercial SOC platforms,
+but to demonstrate a sustainable SOC foundation architecture.
+
