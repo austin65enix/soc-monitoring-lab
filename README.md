@@ -9,7 +9,7 @@ maintainability can be integrated into a single operational model.
 ## Architecture Overview
 
 <a href="images/architecture-overview.svg">
-  <img src="images/architecture-overview.svg" width="900">
+  <img src="images/architecture-overview-optimized.svg" width="900">
 </a>
 
 ---
