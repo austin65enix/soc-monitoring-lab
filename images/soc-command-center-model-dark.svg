@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="920" viewBox="0 0 1400 920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050B1A"/>
+      <stop offset="55%" stop-color="#071126"/>
+      <stop offset="100%" stop-color="#05071A"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1735"/>
+      <stop offset="100%" stop-color="#08122A"/>
+    </linearGradient>
+    <linearGradient id="strokeGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="60%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.75 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title{font: 700 34px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#E5E7EB; letter-spacing:0.5px}
+      .subtitle{font: 500 16px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#9CA3AF}
+      .h{font: 700 20px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#E5E7EB}
+      .k{font: 600 16px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#D1D5DB}
+      .t{font: 500 15px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#9CA3AF}
+      .mono{font: 600 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill:#A5B4FC}
+      .panel{fill:url(#panel); stroke:url(#strokeGlow); stroke-width:2; rx:18; filter:url(#softGlow)}
+      .divider{stroke:#1F2A44; stroke-width:1}
+      .arrow{stroke:#22D3EE; stroke-width:2.2; fill:none; marker-end:url(#arrowHead)}
+      .badge{fill:#0B1B3E; stroke:#1D4ED8; stroke-width:1; rx:999}
+      .badgeText{font: 650 12px ui-sans-serif, system-ui; fill:#BFDBFE; letter-spacing:0.4px}
+    </style>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22D3EE"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="700" y="70" text-anchor="middle" class="title">SOC = 企業資安戰情中心（概念 + 架構整合模型）</text>
+  <text x="700" y="102" text-anchor="middle" class="subtitle">把通俗比喻（戰情中心）落到可運作的 SOC 架構分層與責任分工</text>
+
+  <!-- Concept Panel -->
+  <g transform="translate(90,150)">
+    <rect class="panel" x="0" y="0" width="1220" height="300" />
+    <text x="30" y="44" class="h">概念層對照</text>
+    <g transform="translate(30,68)">
+      <rect class="badge" x="0" y="0" width="120" height="26"/>
+      <text x="60" y="18" text-anchor="middle" class="badgeText">CONCEPT</text>
+    </g>
+
+    <line class="divider" x1="610" y1="70" x2="610" y2="270"/>
+
+    <text x="50" y="105" class="k">戰情中心</text>
+    <text x="660" y="105" class="k">SOC（Security Operations Center）</text>
+
+    <!-- rows -->
+    <text x="50" y="150" class="t">即時監控戰場狀況</text>
+    <text x="660" y="150" class="t">即時監控系統與網路狀態</text>
+
+    <text x="50" y="188" class="t">發現敵軍異動</text>
+    <text x="660" y="188" class="t">偵測異常行為與資安事件</text>
+
+    <text x="50" y="226" class="t">情報整合分析</text>
+    <text x="660" y="226" class="t">事件關聯與時間軸分析</text>
+
+    <text x="50" y="264" class="t">下達戰術決策</text>
+    <text x="660" y="264" class="t">Root Cause 分析與處置</text>
+
+    <text x="50" y="302" class="t">長期戰略優化</text>
+    <text x="660" y="302" class="t">告警調校與維運策略改善</text>
+  </g>
+
+  <!-- Architecture Panel -->
+  <g transform="translate(90,490)">
+    <rect class="panel" x="0" y="0" width="1220" height="340" />
+    <text x="30" y="44" class="h">架構層對照（你的 SOC Lab）</text>
+    <g transform="translate(30,68)">
+      <rect class="badge" x="0" y="0" width="132" height="26"/>
+      <text x="66" y="18" text-anchor="middle" class="badgeText">ARCHITECTURE</text>
+    </g>
+
+    <line class="divider" x1="610" y1="70" x2="610" y2="310"/>
+
+    <text x="50" y="120" class="t">雷達 / 偵查單位</text>
+    <text x="660" y="120" class="mono">Zabbix / Wazuh / Zeek</text>
+
+    <text x="50" y="165" class="t">情報整合中心</text>
+    <text x="660" y="165" class="mono">Graylog</text>
+
+    <text x="50" y="210" class="t">戰術分析小組</text>
+    <text x="660" y="210" class="mono">Root Cause Analysis</text>
+
+    <text x="50" y="255" class="t">戰略監控與補給</text>
+    <text x="660" y="255" class="mono">Prometheus</text>
+
+    <text x="50" y="300" class="t">後勤與制度</text>
+    <text x="660" y="300" class="mono">Maintenance SOP</text>
+  </g>
+</svg>

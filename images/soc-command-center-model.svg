@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.title { font: bold 32px Arial; fill: #1f2937; }
+.sectionTitle { font: bold 22px Arial; fill: #111827; }
+.text { font: 18px Arial; fill: #374151; }
+.box { fill: #f3f4f6; stroke: #2563eb; stroke-width: 2; rx: 12; }
+</style>
+
+<text x="600" y="60" text-anchor="middle" class="title">
+SOC = 企業資安戰情中心（概念與架構整合模型）
+</text>
+
+<rect x="100" y="120" width="1000" height="300" class="box"/>
+<text x="600" y="160" text-anchor="middle" class="sectionTitle">
+概念層對照（Conceptual Mapping）
+</text>
+
+<text x="200" y="210" class="text">戰情中心</text>
+<text x="700" y="210" class="text">SOC（Security Operations Center）</text>
+
+<text x="200" y="250" class="text">即時監控戰場狀況</text>
+<text x="700" y="250" class="text">即時監控系統與網路狀態</text>
+
+<text x="200" y="285" class="text">發現敵軍異動</text>
+<text x="700" y="285" class="text">偵測異常與資安事件</text>
+
+<text x="200" y="320" class="text">情報整合分析</text>
+<text x="700" y="320" class="text">事件關聯與時間軸分析</text>
+
+<text x="200" y="355" class="text">下達戰術決策</text>
+<text x="700" y="355" class="text">Root Cause 分析與處置</text>
+
+<text x="200" y="390" class="text">長期戰略優化</text>
+<text x="700" y="390" class="text">告警調校與維運優化</text>
+
+<rect x="100" y="460" width="1000" height="320" class="box"/>
+<text x="600" y="500" text-anchor="middle" class="sectionTitle">
+架構層對照（Architectural Mapping）
+</text>
+
+<text x="200" y="550" class="text">雷達 / 偵查單位</text>
+<text x="700" y="550" class="text">Zabbix / Wazuh / Zeek</text>
+
+<text x="200" y="585" class="text">情報整合中心</text>
+<text x="700" y="585" class="text">Graylog</text>
+
+<text x="200" y="620" class="text">戰術分析小組</text>
+<text x="700" y="620" class="text">Root Cause Analysis</text>
+
+<text x="200" y="655" class="text">戰略監控與補給</text>
+<text x="700" y="655" class="text">Prometheus</text>
+
+<text x="200" y="690" class="text">後勤與制度</text>
+<text x="700" y="690" class="text">Maintenance SOP</text>
+
+</svg>

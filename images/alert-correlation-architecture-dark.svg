@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="820" viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050B1A"/>
+      <stop offset="55%" stop-color="#071126"/>
+      <stop offset="100%" stop-color="#05071A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1735"/>
+      <stop offset="100%" stop-color="#08122A"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="55%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.75 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22D3EE"/>
+    </marker>
+    <style>
+      .title{font:700 34px ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill:#E5E7EB}
+      .subtitle{font:500 16px ui-sans-serif, system-ui; fill:#9CA3AF}
+      .card{fill:url(#card); stroke:url(#edge); stroke-width:2; rx:18; filter:url(#softGlow)}
+      .h{font:700 18px ui-sans-serif, system-ui; fill:#E5E7EB}
+      .t{font:500 15px ui-sans-serif, system-ui; fill:#9CA3AF}
+      .mono{font:650 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill:#A5B4FC}
+      .arrow{stroke:#22D3EE; stroke-width:2.4; fill:none; marker-end:url(#arrowHead)}
+      .label{font:600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill:#67E8F9}
+      .pill{fill:#0B1B3E; stroke:#1D4ED8; stroke-width:1; rx:999}
+      .pillTxt{font:650 12px ui-sans-serif, system-ui; fill:#BFDBFE}
+    </style>
+  </defs>
+
+  <rect width="1400" height="820" fill="url(#bg)"/>
+
+  <text x="700" y="70" text-anchor="middle" class="title">Alert & Correlation Architecture（告警 × 關聯）</text>
+  <text x="700" y="102" text-anchor="middle" class="subtitle">監控偵測 → 通知 → 日誌關聯 → 根因分析 → 趨勢驗證 → 長期維運</text>
+
+  <!-- Cards -->
+  <g transform="translate(100,170)">
+    <rect class="card" x="0" y="0" width="330" height="140"/>
+    <text x="20" y="40" class="h">Detection</text>
+    <text x="20" y="68" class="mono">Zabbix / Wazuh / Zeek</text>
+    <text x="20" y="98" class="t">異常偵測（Availability / Host / Network）</text>
+  </g>
+
+  <g transform="translate(535,170)">
+    <rect class="card" x="0" y="0" width="330" height="140"/>
+    <text x="20" y="40" class="h">Notification</text>
+    <text x="20" y="68" class="mono">Email / Ops Channel</text>
+    <text x="20" y="98" class="t">Trigger → Problem / Recovery 通知</text>
+  </g>
+
+  <g transform="translate(970,170)">
+    <rect class="card" x="0" y="0" width="330" height="140"/>
+    <text x="20" y="40" class="h">Correlation</text>
+    <text x="20" y="68" class="mono">Graylog Timeline</text>
+    <text x="20" y="98" class="t">多來源事件關聯與時間軸</text>
+  </g>
+
+  <g transform="translate(310,390)">
+    <rect class="card" x="0" y="0" width="360" height="150"/>
+    <text x="20" y="45" class="h">Root Cause Analysis</text>
+    <text x="20" y="78" class="t">判斷：Crash / Manual Restart / Attack Chain</text>
+    <text x="20" y="110" class="t">輸出：處置決策、證據鏈、復原步驟</text>
+  </g>
+
+  <g transform="translate(755,390)">
+    <rect class="card" x="0" y="0" width="360" height="150"/>
+    <text x="20" y="45" class="h">Trend Validation</text>
+    <text x="20" y="75" class="mono">Prometheus</text>
+    <text x="20" y="110" class="t">基準線、容量規劃、趨勢 vs 偶發</text>
+  </g>
+
+  <g transform="translate(100,600)">
+    <rect class="card" x="0" y="0" width="1200" height="140"/>
+    <text x="20" y="45" class="h">Operational Sustainability</text>
+    <text x="20" y="78" class="t">Maintenance SOP / Retention / Alert Tuning / Upgrade & Restore Drill</text>
+    <g transform="translate(20,95)">
+      <rect class="pill" x="0" y="0" width="110" height="28"/><text x="55" y="19" text-anchor="middle" class="pillTxt">Daily</text>
+      <rect class="pill" x="125" y="0" width="110" height="28"/><text x="180" y="19" text-anchor="middle" class="pillTxt">Weekly</text>
+      <rect class="pill" x="250" y="0" width="110" height="28"/><text x="305" y="19" text-anchor="middle" class="pillTxt">Monthly</text>
+      <rect class="pill" x="375" y="0" width="110" height="28"/><text x="430" y="19" text-anchor="middle" class="pillTxt">Quarterly</text>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M 430 240 C 470 240, 495 240, 535 240"/>
+  <text x="485" y="225" text-anchor="middle" class="label">trigger</text>
+
+  <path class="arrow" d="M 865 240 C 905 240, 930 240, 970 240"/>
+  <text x="920" y="225" text-anchor="middle" class="label">events</text>
+
+  <path class="arrow" d="M 1135 310 C 1135 340, 1040 360, 935 390"/>
+  <text x="1105" y="355" text-anchor="middle" class="label">timeline</text>
+
+  <path class="arrow" d="M 700 310 C 700 340, 605 360, 490 390"/>
+  <text x="660" y="355" text-anchor="middle" class="label">notify</text>
+
+  <path class="arrow" d="M 670 465 C 705 465, 725 465, 755 465"/>
+  <text x="712" y="448" text-anchor="middle" class="label">validate</text>
+
+  <path class="arrow" d="M 490 540 C 490 575, 450 595, 380 600"/>
+  <path class="arrow" d="M 935 540 C 935 575, 980 595, 1030 600"/>
+  <text x="700" y="585" text-anchor="middle" class="label">sustain</text>
+</svg>
