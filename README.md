@@ -1,116 +1,96 @@
-# SOC Monitoring Lab
+# SOC 監控與事件處理架構實驗室  
+### SOC Monitoring & SIEM Architecture Lab
 
-An architect-level SOC monitoring lab demonstrating how availability,
-security visibility, network analysis, incident forensics, and long-term
-maintainability can be integrated into a single operational model.
+本專案展示一套整合式 Monitoring 與 SIEM 架構，
+強調系統穩定性、資安可視性、事件關聯能力，
+以及長期可維運與可交接的設計思維。
 
 ---
 
-## Architecture Overview
+## 🏗 架構總覽
 
 <a href="images/architecture-overview.svg">
-  <img src="images/architecture-overview-optimized.svg" width="900">
+  <img src="images/architecture-overview.svg" width="900">
 </a>
 
 ---
 
-## Architecture Design
+## 🎯 架構設計理念
 
-This lab is designed as a **three-layer integrated Monitoring + SIEM architecture**.
+本架構採用三層式設計：
 
-### 1) Detection & Monitoring Layer
-Zabbix, Wazuh, and Zeek focus on detecting availability issues, host-level security events,
-and network behavior anomalies from different perspectives.
+### 第一層：偵測與監控層（Detection Layer）
+- **Zabbix**：系統與服務可用性監控  
+- **Wazuh**：主機層資安監控與稽核分析（HIDS）  
+- **Zeek**：網路行為與流量分析  
 
-### 2) Event & Forensics Layer
-Graylog acts as the central event hub, aggregating logs and security events into a correlatable
-timeline for incident investigation and root cause analysis.
-
-### 3) Trends & Capacity Layer
-Prometheus provides long-term metrics and trend visibility, supporting capacity planning and
-distinguishing transient anomalies from systemic issues.
-
-This layered design ensures clear responsibility separation, reduced alert fatigue,
-and long-term maintainability.
+負責從不同視角發現異常。
 
 ---
 
-## Core Components
+### 第二層：事件與鑑識層（Forensics Layer）
+- **Graylog**：集中式日誌與事件時間軸關聯  
 
-- **Zabbix** – Availability and service monitoring
-- **Wazuh** – Host-based security monitoring and auditing (HIDS)
-- **Zeek** – Network traffic and behavior analysis
-- **Graylog** – Centralized logging and incident forensics
-- **Prometheus** – Performance trends and capacity planning
-- **EDR** – Real-time endpoint detection and response
+將多來源事件整合為可回溯的 Incident Timeline，
+支援 Root Cause Analysis。
 
 ---
 
-## Incident Workflow
+### 第三層：趨勢與容量層（Trend Layer）
+- **Prometheus**：效能趨勢觀察與容量規劃  
+
+協助區分偶發事件與長期資源問題。
+
+---
+
+## 🔁 事件處理流程
 
 <a href="images/incident-workflow.svg">
   <img src="images/incident-workflow.svg" width="900">
 </a>
 
-### Example Scenarios
-1. Zabbix detects abnormal system or service behavior  
-2. Wazuh / EDR identify suspicious host activity  
-3. Zeek provides network-level evidence (DNS / connections)  
-4. Graylog correlates events into a unified timeline  
-5. Prometheus validates long-term trends vs. anomalies  
+### 範例流程
+
+1. Zabbix 偵測系統或服務異常  
+2. Wazuh / EDR 分析主機行為  
+3. Zeek 提供網路層證據  
+4. Graylog 建立完整事件時間軸  
+5. Prometheus 判斷是否為長期趨勢問題  
 
 ---
 
-## Design Principles
-- One tool, one responsibility
-- Correlatable and traceable incidents
-- Focus on long-term maintainability and handover readiness
+## ⚠ 為什麼許多 SOC 會失敗？
+
+許多企業導入 SOC 工具後仍面臨：
+
+- 告警過多導致 Alert Fatigue  
+- 缺乏事件關聯能力  
+- 工具導向而非架構導向  
+- 沒有長期維運與調校策略  
+
+本專案著重於：
+
+- 分層責任設計  
+- 清楚資料流  
+- 可回溯事件模型  
+- 可持續維運機制  
 
 ---
 
-## Maintenance SOP (High-Level)
-- Daily: platform health checks (services / disk / resources)
-- Weekly: alert quality review and noise reduction
-- Monthly: retention & capacity review (rotation / storage)
-- Quarterly: upgrades, backups, and restore drills
+## 🛠 維運節奏（Maintenance SOP）
 
-- ---
-
-## Why SOC Implementations Often Fail
-
-Many organizations invest heavily in SOC tools,
-but still struggle with operational effectiveness.
-
-### 1. Alert Fatigue
-Too many isolated alerts without proper correlation.
-Security teams spend time reviewing noise instead of real incidents.
-
-### 2. No Clear Event Correlation
-Logs are collected, but not structured into a meaningful timeline.
-Root cause analysis becomes slow and reactive.
-
-### 3. Tool-Centric, Not Architecture-Centric
-Deploying multiple tools without defining:
-- Ownership
-- Data flow
-- Responsibility boundaries
-- Maintenance strategy
-
-### 4. No Operational Sustainability
-Without maintenance SOP, retention planning,
-and alert tuning, SOC platforms degrade over time.
+- 每日：平台健康檢查（服務 / 磁碟 / 資源）  
+- 每週：告警品質調整與降噪  
+- 每月：Retention 與容量檢視  
+- 每季：升級與還原演練  
 
 ---
 
-## How This Lab Addresses Those Problems
+# English Summary
 
-This SOC lab focuses on:
+This repository demonstrates a layered SOC monitoring architecture
+focusing on event correlation, incident investigation,
+and long-term operational sustainability.
 
-- Layered responsibility separation (Detection / Forensics / Trends)
-- Event correlation through centralized logging
-- Clear incident workflow design
-- Long-term maintenance and handover readiness
-
-The goal is not to replicate commercial SOC platforms,
-but to demonstrate a sustainable SOC foundation architecture.
-
+It is designed as an architectural prototype
+rather than a commercial SOC product replacement.
