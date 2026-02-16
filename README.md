@@ -109,6 +109,12 @@ Detection → Notification → Correlation → Root Cause → Trend & Optimize
 
 ---
 
+# 🔔 Zabbix Alert Engineering
+
+<img src="images/zabbix-alert-engineering-dark.svg" width="1000">
+
+---
+
 # 🌍 English Summary
 
 This repository demonstrates a layered SOC monitoring architecture
