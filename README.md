@@ -239,6 +239,32 @@ Level 5 – Full SOC Integration
 
 ---
 
+# 📷 Live Demonstration
+
+## Event Lifecycle Evidence
+
+<img src="images/zabbix-email-sample.png" width="1000">
+
+此畫面顯示：
+- Problem 產生
+- Resolved 時間
+- Duration 計算
+- 事件完整生命週期
+
+---
+
+## Alert Engineering View
+
+<img src="images/zabbix-problem-view.png" width="1000">
+
+此畫面展示：
+- Severity 分級
+- 問題狀態
+- Duration 計算
+- Tag 分類
+- Timeline 支援
+
+
 # 🧠 Architecture Philosophy
 
 Many SOC deployments fail not because of technology,  
