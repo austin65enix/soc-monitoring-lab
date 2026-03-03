@@ -1,4 +1,4 @@
-<img src="images/readme-banner-dark.svg" width="1000">
+<img src="images/readme-banner-dark.svg" width="100%">
 
 # SOC 監控與事件處理架構實驗室  
 ### SOC Monitoring & SIEM Architecture Lab
