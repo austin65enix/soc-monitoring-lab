@@ -1,4 +1,6 @@
-<img src="images/readme-banner-dark.svg" width="100%">
+<p align="center">
+  <img src="images/readme-banner-dark-800.svg" width="100%">
+</p>
 
 # SOC 監控與事件處理架構實驗室  
 ### SOC Monitoring & SIEM Architecture Lab
@@ -14,13 +16,15 @@
 - Root Cause 分析模型
 - 長期可持續維運策略
 
-這是一套「分層能力模型」，而不是工具堆疊展示。
+> 這是一套「分層能力模型」，而不是工具堆疊展示。
 
 ---
 
 # 🧭 SOC = 企業資安戰情中心
 
-<img src="images/soc-command-center-model-dark.svg" width="1000">
+<p align="center">
+  <img src="images/soc-command-center-model-dark.svg" width="100%">
+</p>
 
 SOC 可以理解為企業的「資安戰情中心」，  
 但真正價值在於：
@@ -31,31 +35,35 @@ SOC 可以理解為企業的「資安戰情中心」，
 - 是否具備長期優化能力
 - 是否可持續維運
 
-SOC 的核心不是告警數量，而是決策品質。
+> SOC 的核心不是告警數量，而是決策品質。
 
 ---
 
 # 🏗 架構總覽（五層能力模型）
 
-<img src="images/architecture-overview-dark.svg" width="1000">
+<p align="center">
+  <img src="images/architecture-overview-dark.svg" width="100%">
+</p>
 
 本實驗室採用五層架構能力堆疊：
 
-1️⃣ Detection Layer  
+### 1️⃣ Detection Layer  
 Zabbix / Wazuh / Zeek  
 
-2️⃣ Correlation Layer  
+### 2️⃣ Correlation Layer  
 Graylog  
 
-3️⃣ Root Cause Analysis Layer  
+### 3️⃣ Root Cause Analysis Layer  
 
-4️⃣ Trend Validation Layer  
+### 4️⃣ Trend Validation Layer  
 Prometheus  
 
-5️⃣ Operational Sustainability Layer  
+### 5️⃣ Operational Sustainability Layer  
 Maintenance SOP  
 
-核心理念：
+---
+
+## 核心理念
 
 > Monitoring ≠ 工具  
 > Monitoring = 分層能力 + 事件生命週期
@@ -64,7 +72,9 @@ Maintenance SOP
 
 # 🔔 告警 × 關聯架構
 
-<img src="images/alert-correlation-architecture-dark.svg" width="1000">
+<p align="center">
+  <img src="images/alert-correlation-architecture-dark.svg" width="100%">
+</p>
 
 設計目標：
 
@@ -76,13 +86,15 @@ Maintenance SOP
 - 趨勢驗證
 - 長期優化
 
-避免停留在「大量告警」的初階監控模式。
+> 避免停留在「大量告警」的初階監控模式。
 
 ---
 
 # 🔁 Incident Lifecycle Workflow
 
-<img src="images/incident-workflow-dark.svg" width="1000">
+<p align="center">
+  <img src="images/incident-workflow-dark.svg" width="100%">
+</p>
 
 完整事件流程：
 
@@ -99,7 +111,9 @@ Detection
 
 # 🔧 Zabbix Alert Engineering 展示
 
-<img src="images/zabbix-alert-engineering-dark.svg" width="1000">
+<p align="center">
+  <img src="images/zabbix-alert-engineering-dark.svg" width="100%">
+</p>
 
 實作能力包含：
 
@@ -111,8 +125,7 @@ Detection
 - Downtime 計算
 - Email 通知機制
 
-重點不是「有告警」，  
-而是：
+重點不是「有告警」，而是：
 
 - 是否有完整事件紀錄
 - 是否有恢復時間
@@ -129,7 +142,7 @@ Detection
 | Infrastructure | Server Restart | 基礎設施穩定度 |
 | Lifecycle | Uptime < 10m | 主機重啟偵測 |
 
-此模型確保監控具有策略性，而非隨機設定 Trigger。
+> 此模型確保監控具有策略性，而非隨機設定 Trigger。
 
 ---
 
@@ -143,20 +156,20 @@ Detection
 4. 建立完整時間軸  
 5. 協助判斷是否為 Crash / Manual Restart / Attack Chain  
 
-這層設計避免「單點告警孤立存在」。
+避免「單點告警孤立存在」。
 
 ---
 
 # 📷 Live Demonstration Screenshots
 
-## Zabbix Event Details
-(放置實際 Event Details 截圖)
+## Zabbix Event Details  
+（放置實際 Event Details 截圖）
 
-## Problem & Recovery Timeline
-(放置 Problem / Recovery 畫面)
+## Problem & Recovery Timeline  
+（放置 Problem / Recovery 畫面）
 
-## Email Alert Sample
-(放置 Email 通知截圖)
+## Email Alert Sample  
+（放置 Email 通知截圖）
 
 本 Lab 為實際運行環境截圖展示。
 
@@ -170,7 +183,7 @@ Detection
 - 沒有長期維運策略
 - 缺乏持續優化機制
 
-SOC 失敗通常不是技術不足，而是架構思維不足。
+> SOC 失敗通常不是技術不足，而是架構思維不足。
 
 ---
 
@@ -186,40 +199,40 @@ SOC 失敗通常不是技術不足，而是架構思維不足。
 
 # 📈 Monitoring Maturity Model
 
-Level 1 – Basic Monitoring  
+**Level 1 – Basic Monitoring**  
 單純 CPU / Memory 門檻告警  
 
-Level 2 – Event Tracking  
+**Level 2 – Event Tracking**  
 Problem / Recovery 事件紀錄  
 
-Level 3 – Alert Engineering  
+**Level 3 – Alert Engineering**  
 通知機制、降噪、維護窗口  
 
-Level 4 – Availability Design  
+**Level 4 – Availability Design**  
 Agent / Restart / Uptime 偵測  
 
-Level 5 – Full SOC Integration  
+**Level 5 – Full SOC Integration**  
 監控 × 日誌 × 趨勢 × RCA 關聯模型  
 
 ---
 
 # 🛠 Maintenance SOP
 
-每日：
+### 每日
 - 監控健康檢查
 - 關鍵錯誤掃描
 
-每週：
+### 每週
 - 告警降噪
 - Trigger 優化
 - 日誌 retention 檢查
 
-每月：
+### 每月
 - 容量規劃
 - Graylog pipeline 優化
 - 趨勢分析報告
 
-每季：
+### 每季
 - 升級演練
 - 備份與還原驗證
 - 架構回顧與優化
@@ -239,13 +252,14 @@ Level 5 – Full SOC Integration
 
 ---
 
-# 📷 Live Demonstration
+# 📷 Event Lifecycle Evidence
 
-## Event Lifecycle Evidence
-
-<img src="images/zabbix-email-sample.png" width="1000">
+<p align="center">
+  <img src="images/zabbix-email-sample.png" width="100%">
+</p>
 
 此畫面顯示：
+
 - Problem 產生
 - Resolved 時間
 - Duration 計算
@@ -253,17 +267,21 @@ Level 5 – Full SOC Integration
 
 ---
 
-## Alert Engineering View
+# 📷 Alert Engineering View
 
-<img src="images/zabbix-problem-view.png" width="1000">
+<p align="center">
+  <img src="images/zabbix-problem-view.png" width="100%">
+</p>
 
 此畫面展示：
+
 - Severity 分級
 - 問題狀態
 - Duration 計算
 - Tag 分類
 - Timeline 支援
 
+---
 
 # 🧠 Architecture Philosophy
 
@@ -275,9 +293,9 @@ Designing lifecycle-driven systems is difficult.
 
 This lab is built around three core beliefs:
 
-1. Monitoring must support decision-making.
-2. Every alert must have context.
-3. Sustainability is more important than complexity.
+1. Monitoring must support decision-making.  
+2. Every alert must have context.  
+3. Sustainability is more important than complexity.  
 
 A good SOC is not the one with the most alerts.  
 It is the one with the clearest understanding.
@@ -289,11 +307,11 @@ It is the one with the clearest understanding.
 This repository demonstrates a layered SOC monitoring architecture  
 focused on:
 
-- Event lifecycle modeling
-- Alert engineering
-- Correlation capability
-- Root cause analysis
-- Long-term operational sustainability
+- Event lifecycle modeling  
+- Alert engineering  
+- Correlation capability  
+- Root cause analysis  
+- Long-term operational sustainability  
 
 It rebuilds SOC core capabilities from first principles  
 instead of stacking tools without architectural design.
