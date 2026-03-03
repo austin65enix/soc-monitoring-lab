@@ -1,56 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1400" height="800" xmlns="http://www.w3.org/2000/svg">
-
-<defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#050B1A"/>
-        <stop offset="100%" stop-color="#071126"/>
+<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#071a2f"/>
+      <stop offset="100%" stop-color="#0b2a4a"/>
     </linearGradient>
-
-    <marker id="arrowHead" viewBox="0 0 10 10" refX="9" refY="5"
-        markerWidth="10" markerHeight="10" orient="auto">
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="#22D3EE"/>
+    <linearGradient id="strokeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fd1ff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4fd1ff" />
     </marker>
+  </defs>
 
-    <style>
-        .title { font: bold 34px Arial; fill: #E5E7EB; }
-        .card { fill: #0B1735; stroke: #22D3EE; stroke-width: 2; rx: 18; }
-        .text { font: 16px Consolas; fill: #A5B4FC; }
-        .sub { font: 14px Arial; fill: #9CA3AF; }
-        .arrow { stroke: #22D3EE; stroke-width: 2.5; fill: none; marker-end: url(#arrowHead); }
-    </style>
+  <rect width="800" height="350" fill="url(#bg)" />
 
-</defs>
+  <text x="400" y="50" text-anchor="middle"
+        font-family="Segoe UI, Arial"
+        font-size="26"
+        fill="#ffffff"
+        font-weight="600">
+    Zabbix Alert Engineering Model
+  </text>
 
-<rect width="100%" height="100%" fill="url(#bg)"/>
-
-<text x="700" y="70" text-anchor="middle" class="title">
-Zabbix Alert Engineering Model
-</text>
-
-<!-- Trigger -->
-<rect x="100" y="300" width="220" height="120" class="card"/>
-<text x="210" y="350" text-anchor="middle" class="text">Trigger</text>
-<text x="210" y="375" text-anchor="middle" class="sub">Agent Down (3m)</text>
-
-<!-- Problem -->
-<rect x="370" y="300" width="220" height="120" class="card"/>
-<text x="480" y="350" text-anchor="middle" class="text">Problem</text>
-<text x="480" y="375" text-anchor="middle" class="sub">Event Created</text>
-
-<!-- Notification -->
-<rect x="640" y="300" width="220" height="120" class="card"/>
-<text x="750" y="350" text-anchor="middle" class="text">Notification</text>
-<text x="750" y="375" text-anchor="middle" class="sub">Email Alert</text>
-
-<!-- Recovery -->
-<rect x="910" y="300" width="220" height="120" class="card"/>
-<text x="1020" y="350" text-anchor="middle" class="text">Recovery</text>
-<text x="1020" y="375" text-anchor="middle" class="sub">Resolved + Downtime</text>
-
-<!-- Arrows -->
-<line x1="320" y1="360" x2="370" y2="360" class="arrow"/>
-<line x1="590" y1="360" x2="640" y2="360" class="arrow"/>
-<line x1="860" y1="360" x2="910" y2="360" class="arrow"/>
-
+    <rect x="50" y="150" width="120" height="60" rx="12"
+          fill="none" stroke="url(#strokeGrad)" stroke-width="2"/>
+    
+        <text x="110" y="175" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          Trigger
+        </text>
+        
+        <text x="110" y="190" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          (Agent Down / High CPU)
+        </text>
+        
+        <line x1="170" y1="180"
+              x2="200" y2="180"
+              stroke="#4fd1ff" stroke-width="2"
+              marker-end="url(#arrow)" />
+        
+    <rect x="200" y="150" width="120" height="60" rx="12"
+          fill="none" stroke="url(#strokeGrad)" stroke-width="2"/>
+    
+        <text x="260" y="175" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          Problem Created
+        </text>
+        
+        <line x1="320" y1="180"
+              x2="350" y2="180"
+              stroke="#4fd1ff" stroke-width="2"
+              marker-end="url(#arrow)" />
+        
+    <rect x="350" y="150" width="120" height="60" rx="12"
+          fill="none" stroke="url(#strokeGrad)" stroke-width="2"/>
+    
+        <text x="410" y="175" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          Notification
+        </text>
+        
+        <text x="410" y="190" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          (Email / Escalation)
+        </text>
+        
+        <line x1="470" y1="180"
+              x2="500" y2="180"
+              stroke="#4fd1ff" stroke-width="2"
+              marker-end="url(#arrow)" />
+        
+    <rect x="500" y="150" width="120" height="60" rx="12"
+          fill="none" stroke="url(#strokeGrad)" stroke-width="2"/>
+    
+        <text x="560" y="175" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          Recovery Detected
+        </text>
+        
+        <line x1="620" y1="180"
+              x2="650" y2="180"
+              stroke="#4fd1ff" stroke-width="2"
+              marker-end="url(#arrow)" />
+        
+    <rect x="650" y="150" width="120" height="60" rx="12"
+          fill="none" stroke="url(#strokeGrad)" stroke-width="2"/>
+    
+        <text x="710" y="175" text-anchor="middle"
+              font-family="Segoe UI, Arial"
+              font-size="12"
+              fill="#bde9ff">
+          Downtime Calculation & RCA
+        </text>
+        
 </svg>
