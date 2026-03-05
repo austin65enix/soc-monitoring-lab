@@ -162,14 +162,20 @@ Detection
 
 # 📷 Live Demonstration Screenshots
 
-## Zabbix Event Details  
-（放置實際 Event Details 截圖）
+## Zabbix Event Details
+<p align="center">
+  <img src="images/zabbix-event-details.png" width="100%">
+</p>
 
-## Problem & Recovery Timeline  
-（放置 Problem / Recovery 畫面）
+## Problem & Recovery Timeline
+<p align="center">
+  <img src="images/problem-recovery-timeline.png" width="100%">
+</p>
 
-## Email Alert Sample  
-（放置 Email 通知截圖）
+## Email Alert Sample
+<p align="center">
+  <img src="images/email-alert-sample.png" width="100%">
+</p>
 
 本 Lab 為實際運行環境截圖展示。
 
