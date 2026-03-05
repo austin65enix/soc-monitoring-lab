@@ -46,7 +46,7 @@
 
   <rect width="1400" height="820" fill="url(#bg)"/>
 
-  <text x="700" y="70" text-anchor="middle" class="title">Alert & Correlation Architecture（告警 × 關聯）</text>
+  <text x="700" y="70" text-anchor="middle" class="title">Alert &amp; Correlation Architecture（告警 × 關聯）</text>
   <text x="700" y="102" text-anchor="middle" class="subtitle">監控偵測 → 通知 → 日誌關聯 → 根因分析 → 趨勢驗證 → 長期維運</text>
 
   <!-- Cards -->
@@ -88,7 +88,7 @@
   <g transform="translate(100,600)">
     <rect class="card" x="0" y="0" width="1200" height="140"/>
     <text x="20" y="45" class="h">Operational Sustainability</text>
-    <text x="20" y="78" class="t">Maintenance SOP / Retention / Alert Tuning / Upgrade & Restore Drill</text>
+    <text x="20" y="78" class="t">Maintenance SOP / Retention / Alert Tuning / Upgrade &amp; Restore Drill</text>
     <g transform="translate(20,95)">
       <rect class="pill" x="0" y="0" width="110" height="28"/><text x="55" y="19" text-anchor="middle" class="pillTxt">Daily</text>
       <rect class="pill" x="125" y="0" width="110" height="28"/><text x="180" y="19" text-anchor="middle" class="pillTxt">Weekly</text>
