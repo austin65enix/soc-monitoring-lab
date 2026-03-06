@@ -1,0 +1,42 @@
+<svg width="1200" height="620" viewBox="0 0 1200 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<rect width="1200" height="620" fill="#0B1220"></rect>
+
+<text x="600" y="60" text-anchor="middle" fill="#E5E7EB" font-size="32" font-family="Arial" font-weight="700">
+SOC Command Center Concept
+</text>
+
+<text x="600" y="95" text-anchor="middle" fill="#94A3B8" font-size="15" font-family="Arial">
+Security monitoring as a decision-making system
+</text>
+
+<!-- boxes -->
+
+<rect x="120" y="240" width="170" height="90" rx="14" fill="#172033" stroke="#3B82F6" stroke-width="2"></rect>
+<text x="205" y="285" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial" font-weight="600">Security</text>
+<text x="205" y="305" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial" font-weight="600">Events</text>
+
+<rect x="330" y="240" width="170" height="90" rx="14" fill="#172033" stroke="#22C55E" stroke-width="2"></rect>
+<text x="415" y="290" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial" font-weight="600">Detection</text>
+
+<rect x="540" y="240" width="170" height="90" rx="14" fill="#172033" stroke="#EAB308" stroke-width="2"></rect>
+<text x="625" y="290" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial" font-weight="600">Correlation</text>
+
+<rect x="750" y="240" width="170" height="90" rx="14" fill="#172033" stroke="#F97316" stroke-width="2"></rect>
+<text x="835" y="290" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial" font-weight="600">Investigation</text>
+
+<rect x="960" y="240" width="170" height="90" rx="14" fill="#172033" stroke="#EF4444" stroke-width="2"></rect>
+<text x="1045" y="290" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial" font-weight="600">Response</text>
+
+<!-- arrows -->
+
+<line x1="290" y1="285" x2="330" y2="285" stroke="#64748B" stroke-width="4"></line>
+<line x1="500" y1="285" x2="540" y2="285" stroke="#64748B" stroke-width="4"></line>
+<line x1="710" y1="285" x2="750" y2="285" stroke="#64748B" stroke-width="4"></line>
+<line x1="920" y1="285" x2="960" y2="285" stroke="#64748B" stroke-width="4"></line>
+
+<text x="600" y="500" text-anchor="middle" fill="#94A3B8" font-size="16" font-family="Arial">
+SOC is not just monitoring alerts. It is a system for understanding incidents and supporting security decisions.
+</text>
+
+</svg>
