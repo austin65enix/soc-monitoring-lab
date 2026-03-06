@@ -6,7 +6,8 @@
 ### SOC Monitoring & SIEM Architecture Lab
 
 本專案展示一套整合式 Monitoring 與 SIEM 架構模型，  
-重建企業 SOC 核心能力，而非單純工具部署。
+重建企業 SOC 核心能力與監控架構思維，  
+而非單純展示工具部署。
 
 本 Lab 強調：
 
@@ -258,6 +259,45 @@ Agent / Restart / Uptime 偵測
 
 ---
 
+# 📡 Security Data Pipeline Architecture
+
+<p align="center">
+  <img src="images/security-data-pipeline-dark.svg" width="100%">
+</p>
+
+本圖用來說明 SOC / SIEM 架構在規模擴大後的資料流設計思路。
+
+目前 Lab 以 Wazuh、Zeek 與 Graylog 為主，  
+重點在於理解主機層與網路層事件的收集、分析與關聯流程。
+
+若未來資料量與事件複雜度持續提升，  
+則可進一步演進為包含 Suricata、Kafka 與 ELK / SIEM 的 Security Data Pipeline，  
+以提升整體架構的擴充性、穩定性與事件處理效率。
+
+---
+
+# 📡 Log Pipeline Architecture Thinking
+
+在 SOC 環境中，監控系統不僅需要能夠偵測事件，  
+還需要具備處理大量日誌資料的能力。
+
+當企業環境規模擴大時，log ingestion 與分析架構  
+通常會演進為更完整的 **Security Data Pipeline**。
+
+典型架構可能包含：
+
+- Sensors（Wazuh / Zeek / IDS）
+- Log Collectors（Beats / Syslog）
+- Message Queue（Kafka / Streaming Layer）
+- Analysis Platform（ELK / SIEM）
+- Detection / Investigation
+
+透過 message queue 與 pipeline 機制，  
+可避免大量 log 直接衝擊 SIEM，  
+同時提升整體架構的擴充能力與穩定性。
+
+---
+
 # 📷 Event Lifecycle Evidence
 
 <p align="center">
@@ -286,6 +326,24 @@ Agent / Restart / Uptime 偵測
 - Duration 計算
 - Tag 分類
 - Timeline 支援
+
+---
+
+# 🔭 Future Architecture Exploration
+
+目前 Lab 的目標是建立一套可理解的 SOC monitoring architecture，  
+而非追求過度複雜的工具堆疊。
+
+未來在資料量增加的情境下，  
+架構可能會進一步演進為：
+
+- Kafka-based log streaming
+- ELK-based scalable SIEM platform
+- Advanced detection pipeline
+- Security data correlation framework
+
+這些設計方向將使 SOC 能夠在大規模環境中  
+維持穩定且可持續的監控能力。
 
 ---
 
