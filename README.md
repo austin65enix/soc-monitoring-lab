@@ -6,8 +6,7 @@
 ### SOC Monitoring & SIEM Architecture Lab
 
 本專案展示一套整合式 Monitoring 與 SIEM 架構模型，  
-重建企業 SOC 核心能力與監控架構思維，  
-而非單純展示工具部署。
+重建企業 SOC 核心能力與監控架構思維，而非單純展示工具部署。
 
 本 Lab 強調：
 
@@ -24,7 +23,7 @@
 # 🧭 SOC = 企業資安戰情中心
 
 <p align="center">
-  <img src="images/soc-command-center-model-dark.svg" width="100%">
+  <img src="images/soc-command-center-concept-dark.svg" width="100%">
 </p>
 
 SOC 可以理解為企業的「資安戰情中心」，  
@@ -37,6 +36,24 @@ SOC 可以理解為企業的「資安戰情中心」，
 - 是否可持續維運
 
 > SOC 的核心不是告警數量，而是決策品質。
+
+---
+
+# 🔄 SOC Operational Model
+
+<p align="center">
+  <img src="images/soc-operational-model-dark.svg" width="100%">
+</p>
+
+SOC 的核心能力包含：
+
+- Monitoring（監控）
+- Alerting（告警）
+- Investigation（事件調查）
+- Root Cause Analysis（根因分析）
+- Continuous Improvement（持續優化）
+
+成熟的 SOC 並非只關注告警，而是建立一套持續優化的安全運作機制。
 
 ---
 
@@ -164,16 +181,19 @@ Detection
 # 📷 Live Demonstration Screenshots
 
 ## Zabbix Event Details
+
 <p align="center">
   <img src="images/zabbix-event-details.png" width="100%">
 </p>
 
 ## Problem & Recovery Timeline
+
 <p align="center">
   <img src="images/problem-recovery-timeline.png" width="100%">
 </p>
 
 ## Email Alert Sample
+
 <p align="center">
   <img src="images/email-alert-sample.png" width="100%">
 </p>
@@ -282,50 +302,33 @@ Agent / Restart / Uptime 偵測
 還需要具備處理大量日誌資料的能力。
 
 當企業環境規模擴大時，log ingestion 與分析架構  
-通常會演進為更完整的 **Security Data Pipeline**。
+通常會演進為更完整的 **Security Data Pipeline**：
 
-典型架構可能包含：
+Sensors  
+(Wazuh / Zeek / IDS)
 
-- Sensors（Wazuh / Zeek / IDS）
-- Log Collectors（Beats / Syslog）
-- Message Queue（Kafka / Streaming Layer）
-- Analysis Platform（ELK / SIEM）
-- Detection / Investigation
+↓
+
+Log Collectors  
+(Beats / Syslog)
+
+↓
+
+Message Queue  
+(Kafka / Streaming Layer)
+
+↓
+
+Analysis Platform  
+(ELK / SIEM)
+
+↓
+
+Detection / Investigation
 
 透過 message queue 與 pipeline 機制，  
 可避免大量 log 直接衝擊 SIEM，  
 同時提升整體架構的擴充能力與穩定性。
-
----
-
-# 📷 Event Lifecycle Evidence
-
-<p align="center">
-  <img src="images/zabbix-email-sample.png" width="100%">
-</p>
-
-此畫面顯示：
-
-- Problem 產生
-- Resolved 時間
-- Duration 計算
-- 事件完整生命週期
-
----
-
-# 📷 Alert Engineering View
-
-<p align="center">
-  <img src="images/zabbix-problem-view.png" width="100%">
-</p>
-
-此畫面展示：
-
-- Severity 分級
-- 問題狀態
-- Duration 計算
-- Tag 分類
-- Timeline 支援
 
 ---
 
@@ -357,9 +360,9 @@ Designing lifecycle-driven systems is difficult.
 
 This lab is built around three core beliefs:
 
-1. Monitoring must support decision-making.  
-2. Every alert must have context.  
-3. Sustainability is more important than complexity.  
+1. Monitoring must support decision-making  
+2. Every alert must have context  
+3. Sustainability is more important than complexity  
 
 A good SOC is not the one with the most alerts.  
 It is the one with the clearest understanding.
