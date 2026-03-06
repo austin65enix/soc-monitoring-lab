@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <style>
+      .bg{fill:#0b1220;}
+      .title{fill:#ffffff;font:700 28px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .sub{fill:#9aa4b2;font:500 15px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .h{fill:#e5e7eb;font:700 17px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .t{fill:#cbd5e1;font:500 14px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .m{fill:#94a3b8;font:500 13px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .card{fill:#0f1b33;stroke:#2a3b63;stroke-width:2;rx:16;}
+      .blue{fill:#0f172a;stroke:#3b82f6;stroke-width:2;rx:14;}
+      .green{fill:#0f172a;stroke:#34d399;stroke-width:2;rx:14;}
+      .amber{fill:#0f172a;stroke:#f59e0b;stroke-width:2;rx:14;}
+      .red{fill:#0f172a;stroke:#ef4444;stroke-width:2;rx:14;}
+      .pill{fill:#111c35;stroke:#2a3b63;stroke-width:1.5;rx:999;}
+      .line{stroke:#6b7280;stroke-width:2;opacity:.9;}
+      .dash{stroke:#6b7280;stroke-width:2;opacity:.7;stroke-dasharray:6 6;}
+      .small{fill:#cbd5e1;font:600 12px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+    </style>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"></feDropShadow>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"></rect>
+
+  <text class="title" x="600" y="58" text-anchor="middle">SOC Retention &amp; Capacity Strategy</text>
+  <text class="sub" x="600" y="88" text-anchor="middle">Graylog / OpenSearch / Monitoring Data Lifecycle for Sustainable Operations</text>
+
+  <rect class="card" x="70" y="120" width="1060" height="590" filter="url(#shadow)"></rect>
+
+  <!-- Left column -->
+  <rect class="blue" x="110" y="165" width="300" height="120"></rect>
+  <text class="h" x="260" y="198" text-anchor="middle">Index Rotation</text>
+  <text class="t" x="260" y="225" text-anchor="middle">Rotate by Size / Time</text>
+  <text class="m" x="130" y="252">• Example: 5GB per index</text>
+  <text class="m" x="130" y="274">• Or daily / weekly rotation</text>
+
+  <rect class="green" x="110" y="315" width="300" height="120"></rect>
+  <text class="h" x="260" y="348" text-anchor="middle">Retention Policy</text>
+  <text class="t" x="260" y="375" text-anchor="middle">Keep Only Valuable History</text>
+  <text class="m" x="130" y="402">• Example: 7 / 14 / 30 days</text>
+  <text class="m" x="130" y="424">• Balance visibility and storage cost</text>
+
+  <rect class="amber" x="110" y="465" width="300" height="120"></rect>
+  <text class="h" x="260" y="498" text-anchor="middle">Capacity Thresholds</text>
+  <text class="t" x="260" y="525" text-anchor="middle">Usage-Based Guardrails</text>
+  <text class="m" x="130" y="552">• Warning: 70%</text>
+  <text class="m" x="130" y="574">• Critical: 85%</text>
+
+  <!-- Center flow -->
+  <text class="h" x="600" y="165" text-anchor="middle">Lifecycle Flow</text>
+
+  <rect class="pill" x="490" y="195" width="220" height="44"></rect>
+  <text class="small" x="600" y="222" text-anchor="middle">Logs / Events Ingested</text>
+
+  <line class="line" x1="600" y1="239" x2="600" y2="260"></line>
+
+  <rect class="pill" x="490" y="260" width="220" height="44"></rect>
+  <text class="small" x="600" y="287" text-anchor="middle">Indexed in Graylog / OpenSearch</text>
+
+  <line class="line" x1="600" y1="304" x2="600" y2="325"></line>
+
+  <rect class="pill" x="490" y="325" width="220" height="44"></rect>
+  <text class="small" x="600" y="352" text-anchor="middle">Rotate by Size / Time</text>
+
+  <line class="line" x1="600" y1="369" x2="600" y2="390"></line>
+
+  <rect class="pill" x="490" y="390" width="220" height="44"></rect>
+  <text class="small" x="600" y="417" text-anchor="middle">Apply Retention Policy</text>
+
+  <line class="line" x1="600" y1="434" x2="600" y2="455"></line>
+
+  <rect class="pill" x="490" y="455" width="220" height="44"></rect>
+  <text class="small" x="600" y="482" text-anchor="middle">Remove Aged Data Predictably</text>
+
+  <line class="line" x1="600" y1="499" x2="600" y2="520"></line>
+
+  <rect class="pill" x="490" y="520" width="220" height="44"></rect>
+  <text class="small" x="600" y="547" text-anchor="middle">Keep Search Performance Stable</text>
+
+  <!-- Right column -->
+  <rect class="green" x="790" y="165" width="280" height="165"></rect>
+  <text class="h" x="930" y="198" text-anchor="middle">Recommended Baseline</text>
+  <text class="m" x="810" y="228">• Graylog index rotation: size-based</text>
+  <text class="m" x="810" y="252">• Retention window: 14–30 days</text>
+  <text class="m" x="810" y="276">• Weekly usage review</text>
+  <text class="m" x="810" y="300">• Monthly storage trend review</text>
+
+  <rect class="red" x="790" y="355" width="280" height="115"></rect>
+  <text class="h" x="930" y="388" text-anchor="middle">Risk Without Strategy</text>
+  <text class="m" x="810" y="418">• Disk fills unexpectedly</text>
+  <text class="m" x="810" y="440">• Search becomes slow</text>
+  <text class="m" x="810" y="462">• Useful events buried in noise</text>
+
+  <rect class="blue" x="790" y="495" width="280" height="120"></rect>
+  <text class="h" x="930" y="528" text-anchor="middle">Operational Goal</text>
+  <text class="m" x="810" y="558">• Predictable growth</text>
+  <text class="m" x="810" y="580">• Sustainable storage usage</text>
+  <text class="m" x="810" y="602">• Better incident traceability</text>
+
+  <!-- Connectors -->
+  <line class="dash" x1="410" y1="225" x2="490" y2="217"></line>
+  <line class="dash" x1="410" y1="375" x2="490" y2="412"></line>
+  <line class="dash" x1="410" y1="525" x2="490" y2="542"></line>
+
+  <line class="dash" x1="710" y1="220" x2="790" y2="220"></line>
+  <line class="dash" x1="710" y1="442" x2="790" y2="412"></line>
+  <line class="dash" x1="710" y1="542" x2="790" y2="555"></line>
+
+  <!-- Footer note -->
+  <rect class="pill" x="170" y="640" width="860" height="42"></rect>
+  <text class="small" x="600" y="666" text-anchor="middle">Good SIEM design is not only about collecting more logs — it is about keeping the right history, at the right cost, with the right performance.</text>
+</svg>

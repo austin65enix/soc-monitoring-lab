@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <style>
+      .bg{fill:#0b1220;}
+      .title{fill:#ffffff;font:700 28px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .sub{fill:#9aa4b2;font:500 15px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .h{fill:#e5e7eb;font:700 16px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .t{fill:#cbd5e1;font:500 14px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .m{fill:#94a3b8;font:500 13px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .card{fill:#0f1b33;stroke:#2a3b63;stroke-width:2;rx:16;}
+      .layer{fill:#0f172a;stroke:#3b82f6;stroke-width:2;rx:14;}
+      .accent{fill:#0f172a;stroke:#34d399;stroke-width:2;rx:14;}
+      .warn{fill:#0f172a;stroke:#f59e0b;stroke-width:2;rx:14;}
+      .line{stroke:#6b7280;stroke-width:2;opacity:.9;}
+      .dash{stroke:#6b7280;stroke-width:2;opacity:.7;stroke-dasharray:6 6;}
+      .pill{fill:#111c35;stroke:#2a3b63;stroke-width:1.5;rx:999;}
+      .k{fill:#e5e7eb;font:700 12px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+      .v{fill:#cbd5e1;font:600 12px ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial;}
+    </style>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"></feDropShadow>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="680"></rect>
+
+  <!-- Header -->
+  <text class="title" x="600" y="62" text-anchor="middle">SOC Storage Architecture</text>
+  <text class="sub" x="600" y="92" text-anchor="middle">Ubuntu SIEM Monitoring Lab • LVM Stack (Disk → Partition → PV → VG → LV → Filesystem)</text>
+
+  <!-- Main Card -->
+  <rect class="card" x="90" y="120" width="1020" height="500" filter="url(#shadow)"></rect>
+
+  <!-- Left: Filesystem + Usage -->
+  <rect class="layer" x="140" y="175" width="420" height="140"></rect>
+  <text class="h" x="350" y="212" text-anchor="middle">Filesystem (mounted)</text>
+  <text class="t" x="350" y="240" text-anchor="middle">/  →  /dev/mapper/ubuntu--vg-ubuntu--lv</text>
+  <text class="m" x="350" y="268" text-anchor="middle">EXT4 • Size 48G • Used 8.8G • Avail 37G • Use 20%</text>
+
+  <!-- Usage bar -->
+  <rect x="190" y="287" width="320" height="14" rx="8" fill="#0b1530" stroke="#2a3b63" stroke-width="1.5"></rect>
+  <!-- 20% of 320 = 64 -->
+  <rect x="190" y="287" width="64" height="14" rx="8" fill="#34d399"></rect>
+
+  <!-- Legend pills -->
+  <rect class="pill" x="190" y="310" width="92" height="26"></rect>
+  <text class="k" x="236" y="328" text-anchor="middle">USED</text>
+
+  <rect class="pill" x="296" y="310" width="112" height="26"></rect>
+  <text class="k" x="352" y="328" text-anchor="middle">AVAILABLE</text>
+
+  <rect class="pill" x="422" y="310" width="88" height="26"></rect>
+  <text class="k" x="466" y="328" text-anchor="middle">SIZE</text>
+
+  <text class="v" x="236" y="350" text-anchor="middle">8.8G</text>
+  <text class="v" x="352" y="350" text-anchor="middle">37G</text>
+  <text class="v" x="466" y="350" text-anchor="middle">48G</text>
+
+  <!-- Right: LVM Stack -->
+  <text class="h" x="810" y="182" text-anchor="middle">LVM Stack</text>
+
+  <rect class="accent" x="650" y="205" width="320" height="78"></rect>
+  <text class="t" x="810" y="238" text-anchor="middle">Logical Volume (LV)</text>
+  <text class="m" x="810" y="262" text-anchor="middle">ubuntu-lv  →  mounted as /</text>
+
+  <line class="line" x1="810" y1="283" x2="810" y2="304"></line>
+
+  <rect class="layer" x="650" y="304" width="320" height="78"></rect>
+  <text class="t" x="810" y="337" text-anchor="middle">Volume Group (VG)</text>
+  <text class="m" x="810" y="361" text-anchor="middle">ubuntu-vg  (VSize ~48.22G)</text>
+
+  <line class="line" x1="810" y1="382" x2="810" y2="403"></line>
+
+  <rect class="layer" x="650" y="403" width="320" height="78"></rect>
+  <text class="t" x="810" y="436" text-anchor="middle">Physical Volume (PV)</text>
+  <text class="m" x="810" y="460" text-anchor="middle">/dev/sda3</text>
+
+  <line class="line" x1="810" y1="481" x2="810" y2="502"></line>
+
+  <rect class="warn" x="650" y="502" width="320" height="78"></rect>
+  <text class="t" x="810" y="535" text-anchor="middle">Virtual Disk</text>
+  <text class="m" x="810" y="559" text-anchor="middle">/dev/sda  50G</text>
+
+  <!-- Middle arrows connecting FS and LVM -->
+  <line class="dash" x1="560" y1="245" x2="650" y2="245"></line>
+  <polygon points="650,245 637,238 637,252" fill="#6b7280"></polygon>
+
+  <!-- Bottom notes -->
+  <rect class="pill" x="140" y="470" width="420" height="118"></rect>
+  <text class="h" x="350" y="500" text-anchor="middle">Why this matters for SIEM</text>
+  <text class="m" x="160" y="528">• Logs / indices grow fast (Graylog / OpenSearch / Wazuh)</text>
+  <text class="m" x="160" y="552">• LVM allows future scale-out (pvresize / lvextend) with minimal downtime</text>
+  <text class="m" x="160" y="576">• Recommended next step: retention &amp; index rotation policy</text>
+
+  <!-- Optional future plan (right bottom) -->
+  <rect class="pill" x="650" y="595" width="320" height="40"></rect>
+  <text class="m" x="810" y="620" text-anchor="middle">Future: split LV for /var/lib/opensearch, /var/lib/graylog (when disk ≥ 100G)</text>
+</svg>

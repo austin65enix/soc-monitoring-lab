@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+
+<style>
+.bg{fill:#0b1220;}
+.title{fill:#ffffff;font:700 28px Arial;}
+.sub{fill:#9aa4b2;font:500 15px Arial;}
+.box{fill:#0f172a;stroke:#3b82f6;stroke-width:2;rx:14;}
+.text{fill:#e5e7eb;font:600 15px Arial;}
+.desc{fill:#94a3b8;font:500 13px Arial;}
+.line{stroke:#6b7280;stroke-width:2;}
+</style>
+
+<rect class="bg" width="1200" height="720"></rect>
+
+<text class="title" x="600" y="60" text-anchor="middle">
+SOC Monitoring Maturity Model
+</text>
+
+<text class="sub" x="600" y="90" text-anchor="middle">
+Evolution from Basic Monitoring to Full SOC Capability
+</text>
+
+<!-- Level 1 -->
+<rect class="box" x="200" y="150" width="800" height="70"></rect>
+<text class="text" x="600" y="185" text-anchor="middle">
+Level 1 — Basic Monitoring
+</text>
+<text class="desc" x="600" y="205" text-anchor="middle">
+CPU / Memory / Disk Threshold Alerts
+</text>
+
+<!-- Level 2 -->
+<rect class="box" x="230" y="240" width="740" height="70"></rect>
+<text class="text" x="600" y="275" text-anchor="middle">
+Level 2 — Event Tracking
+</text>
+<text class="desc" x="600" y="295" text-anchor="middle">
+Problem / Recovery Timeline Tracking
+</text>
+
+<!-- Level 3 -->
+<rect class="box" x="260" y="330" width="680" height="70"></rect>
+<text class="text" x="600" y="365" text-anchor="middle">
+Level 3 — Alert Engineering
+</text>
+<text class="desc" x="600" y="385" text-anchor="middle">
+Noise Reduction / Notification / Maintenance Window
+</text>
+
+<!-- Level 4 -->
+<rect class="box" x="290" y="420" width="620" height="70"></rect>
+<text class="text" x="600" y="455" text-anchor="middle">
+Level 4 — Availability Design
+</text>
+<text class="desc" x="600" y="475" text-anchor="middle">
+Agent Health / Restart Detection / Uptime Monitoring
+</text>
+
+<!-- Level 5 -->
+<rect class="box" x="320" y="510" width="560" height="80"></rect>
+<text class="text" x="600" y="545" text-anchor="middle">
+Level 5 — Full SOC Integration
+</text>
+<text class="desc" x="600" y="565" text-anchor="middle">
+Monitoring + Log Correlation + RCA + Trend Validation
+</text>
+
+<!-- Arrow -->
+<line x1="600" y1="220" x2="600" y2="240" class="line"></line>
+<line x1="600" y1="310" x2="600" y2="330" class="line"></line>
+<line x1="600" y1="400" x2="600" y2="420" class="line"></line>
+<line x1="600" y1="490" x2="600" y2="510" class="line"></line>
+
+</svg>

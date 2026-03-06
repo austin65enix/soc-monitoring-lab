@@ -1,0 +1,75 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.title { fill:#ffffff; font-size:26px; font-family:Arial; font-weight:bold;}
+.subtitle { fill:#9ca3af; font-size:16px; font-family:Arial;}
+.label { fill:#e5e7eb; font-size:14px; font-family:Arial;}
+.box { fill:#1f2937; stroke:#60a5fa; stroke-width:2; rx:10;}
+.disk { fill:#111827; stroke:#34d399; stroke-width:2; rx:10;}
+</style>
+
+<rect width="100%" height="100%" fill="#0f172a"></rect>
+
+<text x="500" y="50" text-anchor="middle" class="title">
+SOC Storage Architecture
+</text>
+
+<text x="500" y="80" text-anchor="middle" class="subtitle">
+Ubuntu SIEM Monitoring Lab (LVM Storage Layout)
+</text>
+
+<!-- OS Box -->
+
+<rect x="350" y="120" width="300" height="100" class="box"></rect>
+
+<text x="500" y="155" text-anchor="middle" class="label">
+Ubuntu Server
+</text>
+
+<text x="500" y="180" text-anchor="middle" class="label">
+Root Filesystem (/)
+</text>
+
+<text x="500" y="200" text-anchor="middle" class="label">
+48GB EXT4
+</text>
+
+<!-- LVM -->
+
+<rect x="350" y="250" width="300" height="80" class="box"></rect>
+
+<text x="500" y="285" text-anchor="middle" class="label">
+LVM Volume Group
+</text>
+
+<text x="500" y="305" text-anchor="middle" class="label">
+ubuntu-vg / ubuntu-lv
+</text>
+
+<!-- Partition -->
+
+<rect x="350" y="360" width="300" height="70" class="box"></rect>
+
+<text x="500" y="395" text-anchor="middle" class="label">
+Partition
+</text>
+
+<text x="500" y="415" text-anchor="middle" class="label">
+/dev/sda3
+</text>
+
+<!-- Disk -->
+
+<rect x="350" y="450" width="300" height="50" class="disk"></rect>
+
+<text x="500" y="480" text-anchor="middle" class="label">
+Virtual Disk 50GB
+</text>
+
+<!-- Lines -->
+
+<line x1="500" y1="220" x2="500" y2="250" stroke="#9ca3af" stroke-width="2"></line>
+<line x1="500" y1="330" x2="500" y2="360" stroke="#9ca3af" stroke-width="2"></line>
+<line x1="500" y1="430" x2="500" y2="450" stroke="#9ca3af" stroke-width="2"></line>
+
+</svg>

@@ -1,0 +1,147 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="860" fill="#0B1220"></rect>
+
+  <text x="700" y="56" text-anchor="middle" fill="#E5E7EB" font-size="30" font-family="Arial, sans-serif" font-weight="700">
+    Security Data Pipeline Architecture
+  </text>
+  <text x="700" y="88" text-anchor="middle" fill="#94A3B8" font-size="15" font-family="Arial, sans-serif">
+    From security telemetry collection to detection, investigation, and scalable SOC operations
+  </text>
+
+  <!-- Section backgrounds -->
+  <rect x="50" y="130" width="250" height="620" rx="24" fill="#111827" stroke="#334155" stroke-width="2"></rect>
+  <rect x="340" y="130" width="250" height="620" rx="24" fill="#111827" stroke="#334155" stroke-width="2"></rect>
+  <rect x="630" y="130" width="250" height="620" rx="24" fill="#111827" stroke="#334155" stroke-width="2"></rect>
+  <rect x="920" y="130" width="200" height="620" rx="24" fill="#111827" stroke="#334155" stroke-width="2"></rect>
+  <rect x="1160" y="130" width="190" height="620" rx="24" fill="#111827" stroke="#334155" stroke-width="2"></rect>
+
+  <!-- Section titles -->
+  <text x="175" y="170" text-anchor="middle" fill="#93C5FD" font-size="20" font-family="Arial, sans-serif" font-weight="700">Telemetry Sources</text>
+  <text x="465" y="170" text-anchor="middle" fill="#86EFAC" font-size="20" font-family="Arial, sans-serif" font-weight="700">Collection &amp; Parsing</text>
+  <text x="755" y="170" text-anchor="middle" fill="#FDE68A" font-size="20" font-family="Arial, sans-serif" font-weight="700">Streaming &amp; Storage</text>
+  <text x="1020" y="170" text-anchor="middle" fill="#FCA5A5" font-size="20" font-family="Arial, sans-serif" font-weight="700">Detection</text>
+  <text x="1255" y="170" text-anchor="middle" fill="#C4B5FD" font-size="20" font-family="Arial, sans-serif" font-weight="700">SOC Actions</text>
+
+  <!-- Telemetry boxes -->
+  <rect x="80" y="210" width="190" height="78" rx="16" fill="#172033" stroke="#3B82F6" stroke-width="2"></rect>
+  <text x="175" y="243" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Endpoints / Servers</text>
+  <text x="175" y="268" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Syslog / Auth / Process / OS Events</text>
+
+  <rect x="80" y="320" width="190" height="78" rx="16" fill="#172033" stroke="#3B82F6" stroke-width="2"></rect>
+  <text x="175" y="353" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Network Traffic</text>
+  <text x="175" y="378" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Metadata / Connections / Sessions</text>
+
+  <rect x="80" y="430" width="190" height="78" rx="16" fill="#172033" stroke="#3B82F6" stroke-width="2"></rect>
+  <text x="175" y="463" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Security Devices</text>
+  <text x="175" y="488" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Firewall / WAF / IPS / DNS Logs</text>
+
+  <rect x="80" y="540" width="190" height="78" rx="16" fill="#172033" stroke="#3B82F6" stroke-width="2"></rect>
+  <text x="175" y="573" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Cloud Services</text>
+  <text x="175" y="598" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">AWS / GCP Audit &amp; Platform Logs</text>
+
+  <!-- Collection boxes -->
+  <rect x="370" y="210" width="190" height="78" rx="16" fill="#172033" stroke="#22C55E" stroke-width="2"></rect>
+  <text x="465" y="243" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Wazuh</text>
+  <text x="465" y="268" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Host Monitoring / Rules / Alerts</text>
+
+  <rect x="370" y="320" width="190" height="78" rx="16" fill="#172033" stroke="#22C55E" stroke-width="2"></rect>
+  <text x="465" y="353" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Zeek</text>
+  <text x="465" y="378" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Network Behavior Analysis</text>
+
+  <rect x="370" y="430" width="190" height="78" rx="16" fill="#172033" stroke="#22C55E" stroke-width="2"></rect>
+  <text x="465" y="463" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Suricata</text>
+  <text x="465" y="488" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">IDS / Threat Signatures / EVE JSON</text>
+
+  <rect x="370" y="540" width="190" height="78" rx="16" fill="#172033" stroke="#22C55E" stroke-width="2"></rect>
+  <text x="465" y="573" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Collectors</text>
+  <text x="465" y="598" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Syslog / Beats / Fluent Bit</text>
+
+  <!-- Streaming & Storage boxes -->
+  <rect x="660" y="210" width="190" height="78" rx="16" fill="#172033" stroke="#EAB308" stroke-width="2"></rect>
+  <text x="755" y="243" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Kafka</text>
+  <text x="755" y="268" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Buffer / Stream / Decoupling Layer</text>
+
+  <rect x="660" y="320" width="190" height="78" rx="16" fill="#172033" stroke="#EAB308" stroke-width="2"></rect>
+  <text x="755" y="353" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Log Pipeline</text>
+  <text x="755" y="378" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Parsing / Enrichment / Normalization</text>
+
+  <rect x="660" y="430" width="190" height="78" rx="16" fill="#172033" stroke="#EAB308" stroke-width="2"></rect>
+  <text x="755" y="463" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Graylog / ELK</text>
+  <text x="755" y="488" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Search / Correlation / Visualization</text>
+
+  <rect x="660" y="540" width="190" height="78" rx="16" fill="#172033" stroke="#EAB308" stroke-width="2"></rect>
+  <text x="755" y="573" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Retention Layer</text>
+  <text x="755" y="598" text-anchor="middle" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Hot / Warm / Archive Strategy</text>
+
+  <!-- Detection boxes -->
+  <rect x="950" y="250" width="140" height="88" rx="16" fill="#172033" stroke="#EF4444" stroke-width="2"></rect>
+  <text x="1020" y="286" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">SIEM Rules</text>
+  <text x="1020" y="312" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Detection Logic</text>
+
+  <rect x="950" y="380" width="140" height="88" rx="16" fill="#172033" stroke="#EF4444" stroke-width="2"></rect>
+  <text x="1020" y="416" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Correlation</text>
+  <text x="1020" y="442" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Timeline / Context</text>
+
+  <rect x="950" y="510" width="140" height="88" rx="16" fill="#172033" stroke="#EF4444" stroke-width="2"></rect>
+  <text x="1020" y="546" text-anchor="middle" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">Alerting</text>
+  <text x="1020" y="572" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Severity / Routing</text>
+
+  <!-- SOC actions boxes -->
+  <rect x="1188" y="230" width="134" height="78" rx="16" fill="#172033" stroke="#8B5CF6" stroke-width="2"></rect>
+  <text x="1255" y="263" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial, sans-serif" font-weight="700">Dashboard</text>
+  <text x="1255" y="288" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">SOC Visibility</text>
+
+  <rect x="1188" y="340" width="134" height="78" rx="16" fill="#172033" stroke="#8B5CF6" stroke-width="2"></rect>
+  <text x="1255" y="373" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial, sans-serif" font-weight="700">Investigation</text>
+  <text x="1255" y="398" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Pivot / Triage</text>
+
+  <rect x="1188" y="450" width="134" height="78" rx="16" fill="#172033" stroke="#8B5CF6" stroke-width="2"></rect>
+  <text x="1255" y="483" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial, sans-serif" font-weight="700">Response</text>
+  <text x="1255" y="508" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Contain / Recover</text>
+
+  <rect x="1188" y="560" width="134" height="78" rx="16" fill="#172033" stroke="#8B5CF6" stroke-width="2"></rect>
+  <text x="1255" y="593" text-anchor="middle" fill="#E5E7EB" font-size="17" font-family="Arial, sans-serif" font-weight="700">Optimization</text>
+  <text x="1255" y="618" text-anchor="middle" fill="#94A3B8" font-size="12" font-family="Arial, sans-serif">Rules / SOP / Tuning</text>
+
+  <!-- Arrows main -->
+  <path d="M270 250H370" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M270 360H370" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M270 470H370" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M270 580H370" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+
+  <path d="M560 430H660" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M850 470H950" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M1090 554H1188" stroke="#64748B" stroke-width="4" stroke-linecap="round"></path>
+
+  <!-- Vertical aggregation arrows -->
+  <path d="M465 288V320" stroke="#22C55E" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M465 398V430" stroke="#22C55E" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M465 508V540" stroke="#22C55E" stroke-width="3" stroke-linecap="round"></path>
+
+  <path d="M755 288V320" stroke="#EAB308" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M755 398V430" stroke="#EAB308" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M755 508V540" stroke="#EAB308" stroke-width="3" stroke-linecap="round"></path>
+
+  <path d="M1020 338V380" stroke="#EF4444" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M1020 468V510" stroke="#EF4444" stroke-width="3" stroke-linecap="round"></path>
+
+  <path d="M1255 308V340" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M1255 418V450" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"></path>
+  <path d="M1255 528V560" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"></path>
+
+  <!-- Arrow heads -->
+  <path d="M370 250L358 243V257L370 250Z" fill="#64748B"></path>
+  <path d="M370 360L358 353V367L370 360Z" fill="#64748B"></path>
+  <path d="M370 470L358 463V477L370 470Z" fill="#64748B"></path>
+  <path d="M370 580L358 573V587L370 580Z" fill="#64748B"></path>
+
+  <path d="M660 430L648 423V437L660 430Z" fill="#64748B"></path>
+  <path d="M950 470L938 463V477L950 470Z" fill="#64748B"></path>
+  <path d="M1188 554L1176 547V561L1188 554Z" fill="#64748B"></path>
+
+  <!-- Bottom note -->
+  <rect x="120" y="780" width="1160" height="48" rx="16" fill="#111827" stroke="#334155" stroke-width="1.5"></rect>
+  <text x="700" y="810" text-anchor="middle" fill="#94A3B8" font-size="15" font-family="Arial, sans-serif">
+    Current Lab Focus: Wazuh + Zeek + Graylog ｜ Future Scalable Direction: Suricata + Kafka + ELK / SIEM
+  </text>
+</svg>
