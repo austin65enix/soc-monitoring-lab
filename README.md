@@ -9,6 +9,9 @@
 ## Incident Lifecycle
 ![Workflow](images/incident-workflow-dark.svg)
 
+A layered SOC monitoring architecture focusing on event lifecycle,
+alert engineering and root cause analysis.
+
 <p align="center">
   <img src="images/readme-banner-dark-800.svg" width="100%">
 </p>
