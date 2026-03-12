@@ -1,3 +1,14 @@
+# Quick Architecture Overview
+
+## SOC Architecture
+![SOC Architecture](images/architecture-overview-dark.svg)
+
+## Security Monitoring Pipeline
+![Pipeline](images/security-data-pipeline-dark.svg)
+
+## Incident Lifecycle
+![Workflow](images/incident-workflow-dark.svg)
+
 <p align="center">
   <img src="images/readme-banner-dark-800.svg" width="100%">
 </p>
