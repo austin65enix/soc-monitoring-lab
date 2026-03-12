@@ -1,398 +1,256 @@
-# Quick Architecture Overview
-
-## SOC Architecture
-![SOC Architecture](images/architecture-overview-dark.svg)
-
-## Security Monitoring Pipeline
-![Pipeline](images/security-data-pipeline-dark.svg)
-
-## Incident Lifecycle
-![Workflow](images/incident-workflow-dark.svg)
-
-A layered SOC monitoring architecture focusing on event lifecycle,
-alert engineering and root cause analysis.
-
 <p align="center">
   <img src="images/readme-banner-dark-800.svg" width="100%">
 </p>
 
-# SOC 監控與事件處理架構實驗室  
-### SOC Monitoring & SIEM Architecture Lab
+# SOC 監控與事件處理架構實驗室
 
-本專案展示一套整合式 Monitoring 與 SIEM 架構模型，  
-重建企業 SOC 核心能力與監控架構思維，而非單純展示工具部署。
+### SOC Monitoring Architecture Lab
+
+本專案展示一套 **SOC（Security Operations Center）監控架構模型**，
+重點在於監控架構設計與事件生命週期，而非單純展示工具部署。
 
 本 Lab 強調：
 
-- 事件生命週期設計
-- 告警工程（Alert Engineering）
-- 事件關聯能力
-- Root Cause 分析模型
-- 長期可持續維運策略
+* 事件生命週期設計（Incident Lifecycle）
+* 告警工程（Alert Engineering）
+* 日誌關聯能力（Log Correlation）
+* Root Cause 分析
+* 長期可持續維運策略
 
-> 這是一套「分層能力模型」，而不是工具堆疊展示。
-
----
-
-# 🧭 SOC = 企業資安戰情中心
-
-<p align="center">
-  <img src="images/soc-command-center-concept-dark.svg" width="100%">
-</p>
-
-SOC 可以理解為企業的「資安戰情中心」，  
-但真正價值在於：
-
-- 事件是否被完整關聯
-- 是否能建立清晰時間軸
-- 是否能快速判斷 Root Cause
-- 是否具備長期優化能力
-- 是否可持續維運
-
-> SOC 的核心不是告警數量，而是決策品質。
+> 這是一套「分層能力模型」，而非單純的工具堆疊展示。
 
 ---
 
-# 🔄 SOC Operational Model
+# 架構快速總覽
 
-<p align="center">
-  <img src="images/soc-operational-model-dark.svg" width="100%">
-</p>
+## SOC 監控架構
 
-SOC 的核心能力包含：
-
-- Monitoring（監控）
-- Alerting（告警）
-- Investigation（事件調查）
-- Root Cause Analysis（根因分析）
-- Continuous Improvement（持續優化）
-
-成熟的 SOC 並非只關注告警，而是建立一套持續優化的安全運作機制。
-
----
-
-# 🏗 架構總覽（五層能力模型）
+### SOC Monitoring Architecture
 
 <p align="center">
   <img src="images/architecture-overview-dark.svg" width="100%">
 </p>
 
-本實驗室採用五層架構能力堆疊：
+*Figure 1 – SOC 分層監控架構模型*
 
-### 1️⃣ Detection Layer  
-Zabbix / Wazuh / Zeek  
+此架構展示企業環境中監控系統、日誌分析平台與維運流程如何協同運作，
+形成可持續運行的 SOC 監控體系。
 
-### 2️⃣ Correlation Layer  
-Graylog  
+核心架構流程：
 
-### 3️⃣ Root Cause Analysis Layer  
-
-### 4️⃣ Trend Validation Layer  
-Prometheus  
-
-### 5️⃣ Operational Sustainability Layer  
-Maintenance SOP  
-
----
-
-## 核心理念
-
-> Monitoring ≠ 工具  
-> Monitoring = 分層能力 + 事件生命週期
+```
+Log Sources
+↓
+Detection Layer
+↓
+SIEM Analysis
+↓
+Root Cause Analysis
+↓
+Operational Sustainability
+```
 
 ---
 
-# 🔔 告警 × 關聯架構
+## 資安監控資料流程
 
-<p align="center">
-  <img src="images/alert-correlation-architecture-dark.svg" width="100%">
-</p>
-
-設計目標：
-
-- Trigger 產生事件
-- Email 通知
-- 日誌集中
-- 時間軸建立
-- 根因分析
-- 趨勢驗證
-- 長期優化
-
-> 避免停留在「大量告警」的初階監控模式。
-
----
-
-# 🔁 Incident Lifecycle Workflow
-
-<p align="center">
-  <img src="images/incident-workflow-dark.svg" width="100%">
-</p>
-
-完整事件流程：
-
-Detection  
-→ Notification  
-→ Correlation  
-→ Root Cause  
-→ Trend Validation  
-→ Optimization  
-
-確保每個事件都有完整生命週期，而非孤立存在。
-
----
-
-# 🔧 Zabbix Alert Engineering 展示
-
-<p align="center">
-  <img src="images/zabbix-alert-engineering-dark.svg" width="100%">
-</p>
-
-實作能力包含：
-
-- CPU / Load 門檻告警
-- Agent 存活監控
-- Service restart 偵測
-- VM uptime 重新啟動偵測
-- Problem / Recovery 狀態追蹤
-- Downtime 計算
-- Email 通知機制
-
-重點不是「有告警」，而是：
-
-- 是否有完整事件紀錄
-- 是否有恢復時間
-- 是否可量化可用性
-
----
-
-# 📊 Availability & Performance Monitoring Matrix
-
-| 類型 | 監控項目 | 架構意義 |
-|------|----------|----------|
-| Performance | CPU / Load | 系統效能監控 |
-| Availability | Agent Down | 監控可用性 |
-| Infrastructure | Server Restart | 基礎設施穩定度 |
-| Lifecycle | Uptime < 10m | 主機重啟偵測 |
-
-> 此模型確保監控具有策略性，而非隨機設定 Trigger。
-
----
-
-# 🔗 Zabbix × Graylog 關聯展示
-
-流程：
-
-1. Zabbix 偵測異常  
-2. 發送通知  
-3. Graylog 收集相關日誌  
-4. 建立完整時間軸  
-5. 協助判斷是否為 Crash / Manual Restart / Attack Chain  
-
-避免「單點告警孤立存在」。
-
----
-
-# 📷 Live Demonstration Screenshots
-
-## Zabbix Event Details
-
-<p align="center">
-  <img src="images/zabbix-event-details.png" width="100%">
-</p>
-
-## Problem & Recovery Timeline
-
-<p align="center">
-  <img src="images/problem-recovery-timeline.png" width="100%">
-</p>
-
-## Email Alert Sample
-
-<p align="center">
-  <img src="images/email-alert-sample.png" width="100%">
-</p>
-
-本 Lab 為實際運行環境截圖展示。
-
----
-
-# ⚠ 為什麼許多 SOC 會失敗？
-
-- Alert fatigue
-- 缺乏事件關聯能力
-- 工具堆疊但沒有分層
-- 沒有長期維運策略
-- 缺乏持續優化機制
-
-> SOC 失敗通常不是技術不足，而是架構思維不足。
-
----
-
-# 💡 本專案的設計思路
-
-- 分層責任清楚
-- 事件生命週期模型
-- 關聯與時間軸優先
-- Alert Engineering 設計
-- 維運節奏制度化
-
----
-
-# 📈 Monitoring Maturity Model
-
-**Level 1 – Basic Monitoring**  
-單純 CPU / Memory 門檻告警  
-
-**Level 2 – Event Tracking**  
-Problem / Recovery 事件紀錄  
-
-**Level 3 – Alert Engineering**  
-通知機制、降噪、維護窗口  
-
-**Level 4 – Availability Design**  
-Agent / Restart / Uptime 偵測  
-
-**Level 5 – Full SOC Integration**  
-監控 × 日誌 × 趨勢 × RCA 關聯模型  
-
----
-
-# 🛠 Maintenance SOP
-
-### 每日
-- 監控健康檢查
-- 關鍵錯誤掃描
-
-### 每週
-- 告警降噪
-- Trigger 優化
-- 日誌 retention 檢查
-
-### 每月
-- 容量規劃
-- Graylog pipeline 優化
-- 趨勢分析報告
-
-### 每季
-- 升級演練
-- 備份與還原驗證
-- 架構回顧與優化
-
----
-
-# 🖥 Lab 環境
-
-- Ubuntu VM 架構
-- Zabbix Server
-- Wazuh
-- Graylog
-- Zeek
-- Prometheus
-
-可依企業規模進行橫向擴充。
-
----
-
-# 📡 Security Data Pipeline Architecture
+### Security Monitoring Pipeline
 
 <p align="center">
   <img src="images/security-data-pipeline-dark.svg" width="100%">
 </p>
 
-本圖用來說明 SOC / SIEM 架構在規模擴大後的資料流設計思路。
+*Figure 2 – 安全監控資料處理流程*
 
-目前 Lab 以 Wazuh、Zeek 與 Graylog 為主，  
-重點在於理解主機層與網路層事件的收集、分析與關聯流程。
+此圖展示安全日誌如何從各個系統收集，
+經過集中分析後轉換為可用的安全告警。
 
-若未來資料量與事件複雜度持續提升，  
-則可進一步演進為包含 Suricata、Kafka 與 ELK / SIEM 的 Security Data Pipeline，  
-以提升整體架構的擴充性、穩定性與事件處理效率。
+資料流程：
+
+```
+Log Sources
+→ Wazuh / Zeek
+→ Graylog SIEM
+→ Alert
+→ Investigation
+```
 
 ---
 
-# 📡 Log Pipeline Architecture Thinking
+## 事件處理流程
 
-在 SOC 環境中，監控系統不僅需要能夠偵測事件，  
-還需要具備處理大量日誌資料的能力。
+### Incident Detection Workflow
 
-當企業環境規模擴大時，log ingestion 與分析架構  
-通常會演進為更完整的 **Security Data Pipeline**：
+<p align="center">
+  <img src="images/incident-workflow-dark.svg" width="100%">
+</p>
 
-Sensors  
-(Wazuh / Zeek / IDS)
+*Figure 3 – SOC 事件處理生命週期*
+
+SOC 的核心能力在於建立完整的事件處理流程，
+從告警產生到問題分析與後續優化。
+
+事件生命週期：
+
+```
+Detection
+→ Notification
+→ Correlation
+→ Investigation
+→ Root Cause
+→ Recovery
+→ Optimization
+```
+
+---
+
+# SOC 核心概念
+
+SOC（Security Operations Center）可以理解為企業的資安戰情中心。
+
+SOC 的價值並不在於產生多少告警，而在於是否具備：
+
+* 事件關聯能力
+* 時間軸重建能力
+* Root Cause 分析能力
+* 持續優化監控策略的能力
+
+本 Lab 著重於 **SOC 架構思維**，
+而非僅展示工具安裝與設定。
+
+---
+
+# SOC 運作模型
+
+成熟的 SOC 通常包含以下流程：
+
+```
+Monitoring
+→ Alerting
+→ Investigation
+→ Root Cause Analysis
+→ Recovery
+→ Continuous Improvement
+```
+
+SOC 的目標不只是偵測問題，
+更重要的是持續優化監控系統與降低事件影響。
+
+---
+
+# 監控成熟度模型
+
+SOC 監控能力可分為多個成熟階段：
+
+**Level 1 – Basic Monitoring**
+基礎 CPU / Memory 門檻監控
+
+**Level 2 – Event Tracking**
+記錄 Problem / Recovery 事件
+
+**Level 3 – Alert Engineering**
+告警優化、降噪、維護窗口
+
+**Level 4 – Availability Monitoring**
+基礎設施可用性監控
+
+**Level 5 – Full SOC Integration**
+監控、日誌、關聯與事件生命週期整合
+
+---
+
+# Lab 環境
+
+本實驗室使用多種開源工具模擬企業 SOC 環境：
+
+* Ubuntu Server
+* Wazuh
+* Zeek
+* Graylog
+* Zabbix
+
+透過這些工具整合，
+展示企業監控系統如何進行日誌收集、分析與事件處理。
+
+---
+
+# Security Data Pipeline 思考
+
+在大型企業環境中，
+監控系統通常需要處理大量日誌資料。
+
+常見架構會演進為完整的 Security Data Pipeline：
+
+```
+Sensors
+(Wazuh / Zeek)
 
 ↓
 
-Log Collectors  
-(Beats / Syslog)
+Log Collectors
+(Syslog / Agents)
 
 ↓
 
-Message Queue  
-(Kafka / Streaming Layer)
+Streaming Layer
+(Kafka / Message Queue)
 
 ↓
 
-Analysis Platform  
+Analysis Platform
 (ELK / SIEM)
 
 ↓
 
 Detection / Investigation
+```
 
-透過 message queue 與 pipeline 機制，  
-可避免大量 log 直接衝擊 SIEM，  
-同時提升整體架構的擴充能力與穩定性。
+此架構可以提升：
 
----
-
-# 🔭 Future Architecture Exploration
-
-目前 Lab 的目標是建立一套可理解的 SOC monitoring architecture，  
-而非追求過度複雜的工具堆疊。
-
-未來在資料量增加的情境下，  
-架構可能會進一步演進為：
-
-- Kafka-based log streaming
-- ELK-based scalable SIEM platform
-- Advanced detection pipeline
-- Security data correlation framework
-
-這些設計方向將使 SOC 能夠在大規模環境中  
-維持穩定且可持續的監控能力。
+* 系統擴充性
+* 日誌處理效率
+* 監控系統穩定性
 
 ---
 
-# 🧠 Architecture Philosophy
+# 未來架構探索
 
-Many SOC deployments fail not because of technology,  
-but because of architectural thinking.
+未來此 Lab 可能延伸至：
 
-Stacking tools is easy.  
-Designing lifecycle-driven systems is difficult.
+* Kafka-based log streaming
+* ELK-based SIEM architecture
+* Advanced correlation pipelines
+* Automated detection systems
 
-This lab is built around three core beliefs:
-
-1. Monitoring must support decision-making  
-2. Every alert must have context  
-3. Sustainability is more important than complexity  
-
-A good SOC is not the one with the most alerts.  
-It is the one with the clearest understanding.
+目標是模擬更大型的 SOC 環境。
 
 ---
 
-# 🌍 English Summary
+# Repository Structure
 
-This repository demonstrates a layered SOC monitoring architecture  
-focused on:
+```
+soc-monitoring-lab
+│
+├─ README.md
+├─ images/
+└─ screenshots/
+```
 
-- Event lifecycle modeling  
-- Alert engineering  
-- Correlation capability  
-- Root cause analysis  
-- Long-term operational sustainability  
+---
 
-It rebuilds SOC core capabilities from first principles  
-instead of stacking tools without architectural design.
+# 關鍵字
+
+SOC monitoring
+SIEM architecture
+security monitoring
+log correlation
+alert engineering
+incident lifecycle
+
+---
+
+# 作者
+
+Austin
+
+Infrastructure Monitoring / SOC Architecture Lab
